@@ -10,8 +10,10 @@ let package = Package(
   ],
   products: [
     .library(name: "Bindings", targets: ["Bindings"]),
+    .library(name: "UIKitBindings", targets: ["UIKitBindings"]),
   ],
   targets: [
     .target(name: "Bindings"),
+    .target(name: "UIKitBindings", dependencies: ["Bindings"]),
   ]
 )
