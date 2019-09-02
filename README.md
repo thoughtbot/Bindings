@@ -20,6 +20,7 @@ nameLabel.reactive.text <~ viewModel.fullName
 ### Output bindings respond to changes
 
 ```swift
+nameField.reactive.edited ~> viewModel.setName
 UIApplication.reactive.didBecomeActiveNotification ~> viewModel.refresh
 ```
 
